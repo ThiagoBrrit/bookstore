@@ -39,7 +39,7 @@ class TestOrderViewSet(APITestCase):
         user = UserFactory()
         product = ProductFactory()
         data = json.dumps({
-            'products_id': [product.id],
+            'product_id': [product.id],
             'user': user.id
         })
 
