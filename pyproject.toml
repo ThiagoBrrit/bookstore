@@ -11,6 +11,7 @@ django = "^5.0"
 djangorestframework = "^3.14.0"
 django-extensions = "^3.2.3"
 django-debug-toolbar = "^4.2.0"
+djangorestframework-simplejwt = "^5.3.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.3"
