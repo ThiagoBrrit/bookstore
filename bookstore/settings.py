@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "debug_toolbar",
     "rest_framework.authtoken",
+    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
@@ -139,6 +140,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication'
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
+
+LOGIN_REDIRECT_URL = '/bookstore/v1/order/'
