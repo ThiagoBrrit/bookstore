@@ -38,6 +38,10 @@ RUN apt-get update \
         # deps for building python deps
         build-essential
 
+RUN apt-get update \
+    && apt-get -y install libpq-dev gcc \
+    && pip install psycopg2
+
 # install poetry - respects $POETRY_VERSION & $POETRY_HOME
 RUN pip uninstall -y poetry \
     && pip install poetry==$POETRY_VERSION
@@ -47,9 +51,6 @@ RUN poetry --version
 
 
 # install postgres dependencies inside of Docker
-RUN apt-get update \
-    && apt-get -y install libpq-dev gcc \
-    && pip install psycopg2
 
 # copy project requirement files here to ensure they will be cached.
 WORKDIR $PYSETUP_PATH
