@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - users: actions/checkout@v2
+    - uses: actions/checkout@v2
 
     - name: Set up Python ${{ matrix.python-version }}
       users: actions/setup-python@v2
@@ -25,6 +25,7 @@ jobs:
         python -m ensurepip
         python -m pip install --upgrade pip
         python -m pip install poetry==${{ matrix.poetry-version }}
+
     - name: View poetry --help
       run: poetry --help
 
