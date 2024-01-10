@@ -15,6 +15,7 @@ djangorestframework-simplejwt = "^5.3.1"
 psycopg2 = "^2.9.9"
 whitenoise = "^6.6.0"
 gunicorn = "^21.2.0"
+gitpython = "^3.1.40"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.3"
